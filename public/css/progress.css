@@ -1,0 +1,23 @@
+#progress {
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-200px;
+	width: 400px;
+	height: 150px;
+	background-color:#EEEEEE;
+	border: solid 1px #CCCCCC;
+	text-align:center;
+	display: none;
+}
+
+#messages {
+	width:360px;
+	height:50px;
+	margin:20px;
+}
+
+#progress_bar[value] {
+	width:360px;
+	margin:20px;
+}

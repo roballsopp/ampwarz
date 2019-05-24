@@ -1,0 +1,1 @@
+$(function(){var e=$("audio");$("button").click(function(){var t=$(this).attr("id");var n=e[t].paused;$("button").html("Play Sound");e.each(function(){$(this)[0].pause();$(this)[0].currentTime=0});if(n){e[t].play();$(this).html("Pause Sound")}else e[t].pause()})})

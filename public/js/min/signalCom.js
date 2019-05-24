@@ -1,0 +1,1 @@
+"use strict";function deconstruct(e){e.L=e.X[0].buffer;if(e.channels==2){e.R=e.X[1].buffer}delete e.X;return e}function reconstruct(e){e.X=[new Float32Array(e.L)];delete e.L;if(e.channels==2){e.X[1]=new Float32Array(e.R);delete e.R}return e}function getBufferList(e){var t=[e.L];if(e.channels==2)t.push(e.R);return t}

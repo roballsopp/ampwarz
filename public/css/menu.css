@@ -1,0 +1,94 @@
+.menu { /* place this class on the top level ul of the menu */
+	position: relative; /* this means any elements within .menu will be positioned relative to .menu */
+	display: inline-table;
+	cursor:pointer;
+}
+
+/* make only list items immediately under cat_lvl1 float left */
+.menu > li {
+	padding: 0.7em 1.5em;
+	float: left;
+}
+
+/* format only list items immediately under second level ul */
+.menu ul > li {
+	padding: 0.5em;
+	white-space: nowrap; /* prevents text from wrapping in second level li at the end of .menu */
+	position: relative;
+	border-top:solid 1px #CCCCCC;
+}
+
+/* format only first li to get rid of top border */
+.menu ul > li:first-child {
+	border:none;
+}
+
+/* format all unordered lists */
+.menu, .menu ul {
+	padding: 0px;
+	margin: 0px;
+	background: #EEEEEE; 
+	list-style: none;
+}
+
+/* initially hide all second level ul content */
+.menu ul {
+	display: none;
+	position: absolute; top: 100%; /* since we specified position:relative on top level ul (.menu) position:absolute now works relative to .menu instead of the document */
+}
+
+/* bring second level ul back when you hover over top level list items */
+.menu li:hover > ul {
+	display: block;
+}
+
+/* the background color should change when you hover over any list item */
+.menu li:hover {
+	background: #CCCCCC; 
+}
+
+/* remove the affects of the float after .menu has ended */
+.menu:after {
+	content: ""; clear: both; display: block;
+}
+
+.vertical_menu { /* place this class on the top level ul of the menu */
+	display: inline-table;
+	cursor:pointer;
+}
+
+.vertical_menu li {
+	white-space: nowrap;
+	margin:0em 0em 0.3em 0em;
+	background: #EEEEEE; 
+	position: relative; /* this means any elements within .menu will be positioned relative to .menu */
+	padding: 0.7em 1.5em;
+}
+
+.vertical_menu > li {
+	width: 10em;
+	padding: 0.7em 0em;
+}
+
+.vertical_menu, .vertical_menu ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+.vertical_menu ul {
+	display: none;
+	position: absolute; 
+	left: 100%; /* since we specified position:relative on top level ul (.menu) position:absolute now works relative to .menu instead of the document */
+	top: 0%;
+}
+
+/* bring second level ul back when you hover over top level list items */
+.vertical_menu li:hover > ul {
+	display: block;
+}
+
+/* the background color should change when you hover over any list item */
+.vertical_menu li:hover {
+	background: #CCCCCC; 
+}

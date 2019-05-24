@@ -1,0 +1,1 @@
+<div><?php echo "Copyright &copy; " . date("Y") . " Brich Studios" ?></div>
